@@ -7,14 +7,17 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let pronoun = ['the', 'our'];
-  let adj = ['great', 'big'];
-  let noun = ['jogger', 'racoon'];
-
-  for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
-      for (let x = 0; x < noun.length; x++) {
-        console.log(pronoun[i] + adj[j] + noun[x] + ".com");
+  let pronouns = ['the', 'our'];
+  let adjs = ['great', 'big'];
+  let nouns = ['jogger', 'racoon'];
+  let extensiones = ['.com', '.es'];
+  
+  for (const pronoun of pronouns) { // Representa el elemento (for...of).-
+    for (const adj of adjs) {
+      for (const noun of nouns) {
+        for (const extension of extensiones) {
+          console.log(`${pronoun}${adj}${noun}${extension}`);
+        }
       }
     }
   }
